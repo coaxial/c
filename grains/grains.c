@@ -13,6 +13,8 @@ uint64_t square(uint8_t index) {
 
 uint64_t total(void) {
    // https://en.wikipedia.org/wiki/Wheat_and_chessboard_problem#Solutions
-   // Multiply by two because square(64) is 2^63.
-   return 2 * square(64) - 1;  
+   // The total is basically a constant, but we could also
+   // `return 2 * square(64) - 1;` since square(64) is 2^63, we multiply by two
+   // to get 2^64.
+   return 18446744073709551615ull;
 }
