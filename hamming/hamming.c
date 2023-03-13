@@ -11,8 +11,8 @@ int compute(const char *lhs, const char *rhs) {
 
    // Count number of differences between strands.
    int diff_count = 0;
-   for(int i = 0; lhs[i]; i++) {
-      if (lhs[i] != rhs[i]) {
+   for(; *lhs; lhs++, rhs++) {
+      if (*lhs != *rhs) {
          diff_count++;
       }
    }
