@@ -21,10 +21,7 @@ bool is_armstrong_number(int candidate) {
    int armstrong_calc = 0; // Tracks the calculation result.
 
    // Copy candidate to avoid mutating it and failing the final comparison.
-   int leftover_digits = 0;
-   if (!memcpy(&leftover_digits, &candidate, sizeof(candidate))) {
-      return -1;
-   }
+   int leftover_digits = candidate;
 
    for(int i = 0; i < digits_count; i++) {
       // Get the rightmost digit.
