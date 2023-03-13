@@ -2,22 +2,14 @@
 #include <math.h>
 
 unsigned int sum_of_squares(unsigned int number) {
-   unsigned int total = 0;
-
-   for (unsigned int i = 0; i <= number; i++) {
-      total += pow(i, 2);
-   }
-   return total;
+   // https://learnersbucket.com/examples/algorithms/difference-between-square-of-sum-of-numbers-and-sum-of-square-of-numbers/
+   return (number * (number + 1) * ((number * 2) + 1)) / 6;
 }
 
 unsigned int square_of_sum(unsigned int number) {
-   unsigned int total = 0;
-
-   for (unsigned int i = 0; i <= number; i++) {
-      total += i;
-   }
-
-   return pow(total, 2);
+   // https://learnersbucket.com/examples/algorithms/difference-between-square-of-sum-of-numbers-and-sum-of-square-of-numbers/
+   unsigned int sum = (number * (number + 1)) / 2;
+   return sum * sum;
 }
 
 unsigned int difference_of_squares(unsigned int number) {
