@@ -9,7 +9,8 @@ static bool is_close_enough(int guess, int radicand) {
 }
 
 static int improve(int guess, int radicand) {
-   return ((radicand / guess) + guess) / 2;
+   // return ((radicand / guess) + guess) / 2;
+   return ((radicand / guess) + guess) >> 1;
 }
 
 static int iterate_sqrt(int guess, int radicand) {
